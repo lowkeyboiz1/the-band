@@ -1,0 +1,98 @@
+/* PC */
+@media (min-width : 741px) {}
+
+/* moblie */
+@media (max-width : 740px) {
+    .s-full-width,
+    .contact-input,
+    .header-item__link {
+        width: 100%;
+    }
+
+    .s-text-center {
+        text-align: center;
+    }
+
+    .s-mt-8 {
+        margin-top: 8px;
+    }
+
+    .header-list {
+        display: block;
+    }
+
+    .header {
+        overflow: hidden;
+        display: inline-block;
+    }
+
+    .header-search__link {
+        display: none;
+    }
+
+    .small {
+        display: inline-block;
+    }
+
+    .header-item__link {
+
+        padding: 1px 24px;
+    }
+
+    .header-search__menu {
+        display: block;
+        color: #fff;
+        padding: 18px 24px;
+    }
+
+    .header-search {
+        align-items: flex-start;
+        height: 46px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .header-search__menu:hover {
+        cursor: pointer;
+        color: #000;
+        background-color: #ccc;
+    }
+
+    .listdown {
+        position: initial;
+        background-color: #4f4f4f;
+    }
+
+    .listdown-item__link {
+        color: #fff;
+        padding: 15px 40px;
+    }
+
+
+    .row {
+        display: block;
+    }
+
+    .col-third {
+        width: auto;
+        margin-bottom: 16px;
+
+    }
+
+    .content-section {
+        padding: 64px 16px 58px 16px;
+    }
+
+
+    .rep-moblie {
+        margin-bottom: 32px;
+    }
+
+    .contact-mobile {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+
+}
