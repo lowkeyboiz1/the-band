@@ -64,6 +64,7 @@ html {
     -webkit-appearance: none; /*For Chrome*/
     -moz-appearance: none;/*For Mozilla*/
      appearance: none;
+     font-size: 1.6rem;
 }
 
 .btn:hover {
@@ -384,6 +385,7 @@ html {
     border: 1px solid #ccc;
     border-radius: 2px;
     width: 100%;
+    font-size: 1.6rem;
 }
 
 .form-submit-btn:hover {
