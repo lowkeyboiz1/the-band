@@ -30,7 +30,7 @@ html {
 }
 
 .col-half {
-    width: 49.99999%; 
+    width: 49.99999%;
 }
 
 .col-full {
@@ -61,6 +61,11 @@ html {
     text-decoration: none;
     display: inline-block;
     border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    /*For Chrome*/
+    -moz-appearance: none;
+    /*For Mozilla*/
 }
 
 .btn:hover {
@@ -163,7 +168,7 @@ html {
 }
 
 .header-search__menu {
-    display: none;   
+    display: none;
 }
 
 .header-search__link {
@@ -195,7 +200,6 @@ html {
     position: absolute;
     bottom: 48px;
 
-
 }
 
 .slider-heading {
@@ -211,19 +215,28 @@ html {
     font-weight: 600;
 }
 
-.content-section { 
+.content-section {
     width: 800px;
     max-width: 100%;
     margin: 0 auto;
     padding: 64px 16px 110px 16px;
 }
+
+.action,
+.action:visited {
+    color: #0018ef;
+
+}
+
+
+
 .content-heading {
     text-align: center;
     color: #666670;
     margin: 10px 0;
     font-size: 3rem;
     font-weight: 400;
-    font-family: "Segoe UI",Arial,sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
     letter-spacing: 4px;
 }
 
@@ -255,6 +268,7 @@ html {
     margin-bottom: 15px;
 
 }
+
 .member-img {
     width: 60%;
     border-radius: 4px;
@@ -311,7 +325,7 @@ html {
     font-size: 1.2rem;
     line-height: 2.2rem;
     margin-top: -2px;
-    
+
 }
 
 .place-list {
@@ -404,6 +418,7 @@ html {
     font-size: 1.5rem;
     color: rgba(0, 0, 0, 0.7);
 }
+
 .powered a {
     color: rgba(0, 0, 0, 0.7);
 

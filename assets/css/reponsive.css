@@ -1,7 +1,34 @@
 /* PC */
 @media (min-width : 741px) {}
 
-/* moblie */
+/* tablet and mobile */
+@media (max-width : 1023px) {
+    .form-control {
+        padding: 15px;
+    }
+
+    .btn {
+        padding: 16px;
+    }
+
+    .contact-info {
+        line-height: 2;
+    }
+
+    .socials i {
+        font-size: 42px;
+        margin: 0 8px;
+    }
+
+    .powered a {
+        padding: 12px 0;
+        display: inline-block;
+    }
+
+
+}
+
+/* mobile */
 @media (max-width : 740px) {
     .s-full-width,
     .contact-input,
@@ -91,7 +118,7 @@
 
     .contact-mobile {
         width: 100%;
-        margin-bottom: 8px;
+        margin-bottom: 32px;
     }
 
 
