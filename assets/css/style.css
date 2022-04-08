@@ -64,8 +64,6 @@ html {
     appearance: none;
     -webkit-appearance: none;
     /*For Chrome*/
-    -moz-appearance: none;
-    /*For Mozilla*/
 }
 
 .btn:hover {
