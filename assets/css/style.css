@@ -61,10 +61,12 @@ html {
     text-decoration: none;
     display: inline-block;
     border: none;
-    -webkit-appearance: none; /*For Chrome*/
-    -moz-appearance: none;/*For Mozilla*/
-     appearance: none;
-     font-size: 1.6rem;
+    -webkit-appearance: none;
+    /*For Chrome*/
+    -moz-appearance: none;
+    /*For Mozilla*/
+    appearance: none;
+    font-size: 1.6rem;
 }
 
 .btn:hover {
@@ -188,7 +190,7 @@ html {
 .slider {
     margin-top: 46px;
     padding-top: 50%;
-    background: url(/band/assets/img/chicago.jpg) top center / cover no-repeat;
+    background: url(../img/chicago.jpg) top center / cover no-repeat;
     position: relative;
 
 }
@@ -212,10 +214,11 @@ html {
     color: #fff;
     font-size: 1.6rem;
     font-weight: 600;
+    text-shadow: 0 0 3px #000;
 }
 
 .content-section {
-    width: 800px;
+    width: 60%;
     max-width: 100%;
     margin: 0 auto;
     padding: 64px 16px 110px 16px;
@@ -231,7 +234,7 @@ html {
 
 .content-heading {
     text-align: center;
-    color: #666670;
+    color: #000;
     margin: 10px 0;
     font-size: 3rem;
     font-weight: 400;
@@ -393,6 +396,10 @@ html {
     color: #000;
 }
 
+.map-warp {
+    width: 100%;
+}
+
 .map {
     max-width: 100%;
     filter: grayscale(50%);
@@ -422,4 +429,109 @@ html {
 .powered a {
     color: rgba(0, 0, 0, 0.7);
 
+}
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    display: none;
+}
+
+.modal-container {
+    background-color: #fff;
+    width: 68%;
+    max-width: calc(100% - 32px);
+    position: relative;
+    
+}
+
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px 18px;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.modal-close:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+
+
+.modal-header {
+    background-color: #009688;
+    font-size: 3rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 48px;
+    letter-spacing: 4px;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.modal-header-icon {
+    margin-right: 16px;
+    align-items: center;
+    display: inline-flex
+}
+
+.modal-body {
+    padding: 0 16px;
+}
+
+.modal-label {
+    display: block;
+    font-size: 1.5rem;
+    margin: 16px 0;
+}
+
+.modal-input {
+    font-size: 1.4rem;
+    padding: 11px 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+#buy-stickets {
+    margin: 16px 0;
+    padding: 16px;
+    font-size: 1.6rem;
+    width: 100%;
+    background-color: #009688;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+}
+
+#buy-stickets:hover {
+    opacity: 0.9;
+}
+
+#buy-stickets i {
+    font-size: 1.4rem;
+}
+
+.modal-footer {
+    text-align: right;
+    margin: 32px 16px;
+    font-size: 1.6rem;
+
+}
+
+.modal-help__link {
+    color: #2196F3;
+    padding: 16px 4px;
 }

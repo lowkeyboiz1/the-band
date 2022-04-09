@@ -1,4 +1,14 @@
+
+/* PC >=1024px 
+    tablet >=740px & < 1024px 
+    mobile < 740px 
+
+*/
+
+
+
 /* PC */
+
 @media (min-width : 741px) {}
 
 /* tablet and mobile */
@@ -29,7 +39,7 @@
 }
 
 /* mobile */
-@media (max-width : 740px) {
+@media (max-width : 739px) {
     .s-full-width,
     .contact-input,
     .header-item__link {

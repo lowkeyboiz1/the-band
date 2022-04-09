@@ -168,7 +168,7 @@
                             <p class="place-description">
                                 Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                             </p>
-                            <a href="#" class="btn s-full-width s-text-center">
+                            <a href="#" class="js-buy-sticket btn s-full-width s-text-center">
                                 Buy Tickets
                             </a>
                         </div>
@@ -186,7 +186,7 @@
                             <p class="place-description">
                                 Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                             </p>
-                            <a href="#" class="btn s-full-width s-text-center">
+                            <a href="#" class="js-buy-sticket btn s-full-width s-text-center">
                                 Buy Tickets
                             </a>
                         </div>
@@ -204,7 +204,7 @@
                             <p class="place-description">
                                 Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                             </p>
-                            <a href="#" class="btn s-full-width s-text-center">
+                            <a href="#" class="js-buy-sticket btn s-full-width s-text-center">
                                 Buy Tickets
                             </a>
                         </div>
@@ -254,7 +254,10 @@
             </div>
 
         </div>
-        <img src="./assets/img/map.jpg" alt="map" class="map">
+
+        <div class="map-warp">
+            <img src="./assets/img/map.jpg" alt="map" class="map">
+        </div>
 
         <div class="footer">
             <div class="socials">
@@ -283,6 +286,43 @@
         </div>
     </div>
 
+
+    <div id="modal" class="modal">
+        <div class="modal-container">
+            <div id="modal-close" class="modal-close">
+                <i class="close-icon fa-solid fa-xmark"></i>
+            </div>
+            <header class="modal-header">
+                <i class="modal-header-icon fa-solid fa-suitcase"></i>
+                Tickets
+            </header>
+            <div class="modal-body">
+                <label for="" class="modal-label">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Tickets, $15 per person
+                </label>
+                <input type="text" placeholder="How many?" class="modal-input">
+
+                <label for="" class="modal-label">
+                    <i class="fa-solid fa-user"></i>
+                    Send To
+                </label>
+                <input type="email" placeholder="Enter email" class="modal-input">
+
+                <button id="buy-stickets">
+                    Pay
+                    <i class="fa-solid fa-check"></i>
+                </button>
+            </div>
+
+            <footer class="modal-footer">
+                <p class="modal-help">Need
+                    <a class="modal-help__link" href="#">help?</a>
+                </p>
+            </footer>
+        </div>
+    </div>
+
     <script>
 
         var header = document.getElementById("header");
@@ -307,7 +347,6 @@
         // auto close when click on menu
 
         var menuItems = document.querySelectorAll('#header li a');
-        console.log(menuItems);
         for (var i = 0; i < menuItems.length; i++) {
             var menuItem = menuItems[i];
 
@@ -325,6 +364,27 @@
 
     </script>
 
+    <script>
+        var buySticketBtns = document.querySelectorAll('.js-buy-sticket');
+        for (buySticketBtn of buySticketBtns) {
+            buySticketBtn.onclick = function () {
+                event.preventDefault();
+                closeModal.style.display = "flex";
+
+            }
+        }
+
+
+
+        // close modal
+        var btncloseModalBtn = document.getElementById('modal-close');
+        var closeModal = document.getElementById('modal');
+        console.log(closeModal);
+        btncloseModalBtn.onclick = function () {
+            closeModal.style.display = "none";
+        }
+
+    </script>
 
 </body>
 
