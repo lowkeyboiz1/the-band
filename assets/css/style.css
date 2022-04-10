@@ -53,6 +53,10 @@ html {
     margin-top: 16px !important;
 }
 
+.js-header {
+    height: auto;
+}
+
 .btn {
     padding: 10px 16px;
     background-color: #000;
@@ -174,7 +178,7 @@ html {
 
 .header-search__link {
     color: #fff;
-    padding: 12px 24px;
+    padding: 16px 24px;
 
 }
 
@@ -182,7 +186,7 @@ html {
     font-size: 1.4rem;
 }
 
-.header-search:hover {
+.header-search__link:hover {
     background-color: #f44336;
 }
 
@@ -401,6 +405,8 @@ html {
 }
 
 .map {
+    background-size: cover;
+    background-repeat: no-repeat;
     max-width: 100%;
     filter: grayscale(50%);
 }
@@ -446,11 +452,16 @@ html {
     display: none;
 }
 
+.open {
+    display: flex;
+}
+
 .modal-container {
     background-color: #fff;
     width: 68%;
     max-width: calc(100% - 32px);
     position: relative;
+    animation: modalFadeIn ease 0.5s;
     
 }
 
@@ -534,4 +545,17 @@ html {
 .modal-help__link {
     color: #2196F3;
     padding: 16px 4px;
+}
+
+
+
+@keyframes modalFadeIn {
+    from {
+        transform: translateY(-140px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

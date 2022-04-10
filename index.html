@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div class="main">
+    <div class="main js-main">
         <div id="header" class="header">
             <ul class="header-list">
                 <li class="header-item small">
@@ -168,9 +168,9 @@
                             <p class="place-description">
                                 Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                             </p>
-                            <a href="#" class="js-buy-sticket btn s-full-width s-text-center">
+                            <button href="#" class="js-buy-sticket btn s-full-width s-text-center">
                                 Buy Tickets
-                            </a>
+                            </button>
                         </div>
                     </div>
                     <div class="col col-third">
@@ -186,9 +186,9 @@
                             <p class="place-description">
                                 Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                             </p>
-                            <a href="#" class="js-buy-sticket btn s-full-width s-text-center">
+                            <button href="#" class="js-buy-sticket btn s-full-width s-text-center">
                                 Buy Tickets
-                            </a>
+                            </button>
                         </div>
                     </div>
                     <div class="col col-third">
@@ -204,9 +204,9 @@
                             <p class="place-description">
                                 Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                             </p>
-                            <a href="#" class="js-buy-sticket btn s-full-width s-text-center">
+                            <button href="#" class="js-buy-sticket btn s-full-width s-text-center">
                                 Buy Tickets
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -287,9 +287,9 @@
     </div>
 
 
-    <div id="modal" class="modal">
-        <div class="modal-container">
-            <div id="modal-close" class="modal-close">
+    <div id="modal" class="modal js-modal">
+        <div class="modal-container js-modal-container">
+            <div id="modal-close" class="modal-close js-modal-close">
                 <i class="close-icon fa-solid fa-xmark"></i>
             </div>
             <header class="modal-header">
@@ -329,6 +329,22 @@
         var mobileMenu = document.getElementById("mobile-menu");
         var headerHeight = header.clientHeight;
 
+        //close minimenu when click space empty   
+        var closeMenu = document.querySelector('.js-main');
+
+
+
+        function closeMiniMenu() {
+            var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('listdown');
+            if (isParentMenu) {
+                event.preventDefault();
+            }
+            else {
+                header.style.height = null;
+            }
+        }
+
+
 
         // Open and Close mobile menu
         mobileMenu.onclick = function () {
@@ -336,20 +352,16 @@
 
             if (checkHeight) {
                 header.style.height = "auto";
+            
             }
             else {
                 header.style.height = null;
-
             }
         }
-
-
         // auto close when click on menu
-
         var menuItems = document.querySelectorAll('#header li a');
         for (var i = 0; i < menuItems.length; i++) {
             var menuItem = menuItems[i];
-
             menuItem.onclick = function () {
                 var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('listdown');
                 if (isParentMenu) {
@@ -362,27 +374,66 @@
 
         }
 
+
+
+
     </script>
 
     <script>
-        var buySticketBtns = document.querySelectorAll('.js-buy-sticket');
-        for (buySticketBtn of buySticketBtns) {
-            buySticketBtn.onclick = function () {
-                event.preventDefault();
-                closeModal.style.display = "flex";
+        var buyBtns = document.querySelectorAll('.js-buy-sticket');
+        var modal = document.querySelector('.js-modal');
+        var modalClose = document.querySelector('.js-modal-close');
+        var modalContainer = document.querySelector('.js-modal-container');
 
-            }
+
+        // show modal
+        function showBuyStickets() {
+            modal.classList.add('open');
         }
+        for (var buyBtn of buyBtns) {
+            buyBtn.addEventListener('click', showBuyStickets);
+        }
+
+
+
+        function closeModal() {
+            modal.classList.remove('open');
+        }
+        modalClose.addEventListener('click', closeModal);
+
+
+        // close modal click space empty
+        modal.addEventListener('click', closeModal);
+        modalContainer.addEventListener('click', function (event) {
+            event.stopPropagation();
+        })
+
+
+
+
+
+
+
+
+        //open modal
+        // var buySticketBtns = document.querySelectorAll('.js-buy-sticket');
+        // for (buySticketBtn of buySticketBtns) {
+        //     buySticketBtn.onclick = function () {
+        //         event.preventDefault();
+        //         closeModal.style.display = "flex";
+
+        //     }
+        // }
 
 
 
         // close modal
-        var btncloseModalBtn = document.getElementById('modal-close');
-        var closeModal = document.getElementById('modal');
-        console.log(closeModal);
-        btncloseModalBtn.onclick = function () {
-            closeModal.style.display = "none";
-        }
+        // var btncloseModalBtn = document.getElementById('modal-close');
+        // var closeModal = document.getElementById('modal');
+        // console.log(closeModal);
+        // btncloseModalBtn.onclick = function () {
+        //     closeModal.style.display = "none";
+        // }
 
     </script>
 
